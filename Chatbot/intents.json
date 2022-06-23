@@ -89,7 +89,26 @@
       "patterns": [ "road destroy", "destroy","sidewalk destroy","sidewalk","road","problem"],
       "responses": [ "call:02-120(02-731-2120) abroad: 82-2-731-2120" ],
       "context": [ "" ]
+    },
+    {
+      "tag": "bus 143",
+      "patterns": [ "bus 143 reservation","143 reser"],
+      "responses": [ "call: 02-941-3453" ],
+      "context": [ "" ]
+    },
+    {
+      "tag": "bus 6712",
+      "patterns": [ "bus 6712 reservation","6712 reser"],
+      "responses": [ "call: 02-2666-0966" ],
+      "context": [ "" ]
+    },
+    {
+      "tag": "bus 5714",
+      "patterns": [ "bus 5714 reservation","5714 reser"],
+      "responses": [ "call: 02-898-4324" ],
+      "context": [ "" ]
     }
+
     
     
   ]
