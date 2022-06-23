@@ -32,7 +32,7 @@ def chatbot_response():
     res = getResponse(ints, intents)
     dict_string=dict()
     dict_string['msg']=res
-    json_string = json.dumps(dict_string)
+    json_string = json.dumps(dict_string, ensure_ascii=False)
     return json_string
 
 
@@ -85,5 +85,5 @@ def getResponse(ints, intents_json):
 
 #flask app
 if __name__ == "__main__":
-    app.run()
+    app.run(host='0.0.0.0', port=50)
 
