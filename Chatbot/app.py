@@ -1,4 +1,3 @@
-# libraries
 import random
 import numpy as np
 import pickle
@@ -11,9 +10,10 @@ from nltk.stem import WordNetLemmatizer
 lemmatizer = WordNetLemmatizer()
 
 
-# chat initialization
+# 챗봇 기초
 model = load_model("chatbot_model.h5")
-intents = json.loads(open("intents.json").read())
+with open("intents.json", encoding="utf-8") as f:
+    intents = json.load(f)
 words = pickle.load(open("words.pkl", "rb"))
 classes = pickle.load(open("classes.pkl", "rb"))
 
@@ -24,46 +24,26 @@ app = Flask(__name__)
 def home():
     return render_template("index.html")
 
-
+#채팅 메세지 POST
 @app.route("/get", methods=["POST"])
 def chatbot_response():
     msg = request.form["msg"]
-    if msg.startswith('my name is'):
-        name = msg[11:]
-        ints = predict_class(msg, model)
-        res1 = getResponse(ints, intents)
-        res =res1.replace("{n}",name)
-        dict_string=dict()
-        dict_string['msg']=res
-        json_string = json.dumps(dict_string)
-        return json_string
-    
-    elif msg.startswith('hi my name is'):
-        name = msg[14:]
-        ints = predict_class(msg, model)
-        res1 = getResponse(ints, intents)
-        res =res1.replace("{n}",name)
-        dict_string=dict()
-        dict_string['msg']=res
-        json_string = json.dumps(dict_string)
-        return json_string
-    else:
-        ints = predict_class(msg, model)
-        res = getResponse(ints, intents)
-        dict_string=dict()
-        dict_string['msg']=res
-        json_string = json.dumps(dict_string)
-        return json_string
+    ints = predict_class(msg, model)
+    res = getResponse(ints, intents)
+    dict_string=dict()
+    dict_string['msg']=res
+    json_string = json.dumps(dict_string)
+    return json_string
 
 
-# chat functionalities
+# 채팅 기능
 def clean_up_sentence(sentence):
     sentence_words = nltk.word_tokenize(sentence)
     sentence_words = [lemmatizer.lemmatize(word.lower()) for word in sentence_words]
     return sentence_words
 
 
-# return bag of words array: 0 or 1 for each word in the bag that exists in the sentence
+# words array return : 문장에 존재하는 각 단어에 대해 0 또는 1
 def bow(sentence, words, show_details=True):
     # tokenize the pattern
     sentence_words = clean_up_sentence(sentence)
@@ -80,7 +60,7 @@ def bow(sentence, words, show_details=True):
 
 
 def predict_class(sentence, model):
-    # filter out predictions below a threshold
+    # 역치 이하의 예측 걸러내기
     p = bow(sentence, words, show_details=False)
     res = model.predict(np.array([p]))[0]
     ERROR_THRESHOLD = 0.25
@@ -92,7 +72,7 @@ def predict_class(sentence, model):
         return_list.append({"intent": classes[r[0]], "probability": str(r[1])})
     return return_list
 
-
+#대답 return
 def getResponse(ints, intents_json):
     tag = ints[0]["intent"]
     list_of_intents = intents_json["intents"]
@@ -103,6 +83,7 @@ def getResponse(ints, intents_json):
     return result
 
 
+#flask app
 if __name__ == "__main__":
     app.run()
 

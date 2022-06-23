@@ -1,4 +1,3 @@
-# libraries
 import random
 from tensorflow.keras.optimizers import SGD
 from keras.layers import Dense, Dropout
@@ -15,25 +14,25 @@ nltk.download("punkt")
 nltk.download("wordnet")
 
 
-# init file
+# 파일 load
 words = []
 classes = []
 documents = []
 ignore_words = ["?", "!"]
-data_file = open("intents.json").read()
-intents = json.loads(data_file)
+with open("intents.json", encoding="utf-8") as f:
+    intents = json.load(f)
 
-# words
+# 단어
 for intent in intents["intents"]:
     for pattern in intent["patterns"]:
 
-        # take each word and tokenize it
+        # 각 단어 토큰화
         w = nltk.word_tokenize(pattern)
         words.extend(w)
-        # adding documents
+        # documents 추가
         documents.append((w, intent["tag"]))
 
-        # adding classes to our class list
+        # class list에 classes 추가
         if intent["tag"] not in classes:
             classes.append(intent["tag"])
 
@@ -53,37 +52,37 @@ print(len(words), "unique lemmatized words", words)
 pickle.dump(words, open("words.pkl", "wb"))
 pickle.dump(classes, open("classes.pkl", "wb"))
 
-# training initializer
-# initializing training data
+# 학습 데이터 초기화
 training = []
 output_empty = [0] * len(classes)
 for doc in documents:
-    # initializing bag of words
+    # 단어 초기화
     bag = []
-    # list of tokenized words for the pattern
+    # 패턴에 대한 토큰화된 단어 리스트
     pattern_words = doc[0]
-    # lemmatize each word - create base word, in attempt to represent related words
+    # 기본 단어 만들기?
     pattern_words = [lemmatizer.lemmatize(word.lower()) for word in pattern_words]
-    # create our bag of words array with 1, if word match found in current pattern
+    # 패턴에서 일치하는 단어 있을 시 1로 단어 추가
     for w in words:
         bag.append(1) if w in pattern_words else bag.append(0)
 
-    # output is a '0' for each tag and '1' for current tag (for each pattern)
+    # 출력은 각 태그에 대해 0, 현재 태그에 대해서 1
     output_row = list(output_empty)
     output_row[classes.index(doc[1])] = 1
 
     training.append([bag, output_row])
-# shuffle our features and turn into np.array
+# shuffle
 random.shuffle(training)
 training = np.array(training)
-# create train and test lists. X - patterns, Y - intents
+# 테스트 목록 생성
 train_x = list(training[:, 0])
 train_y = list(training[:, 1])
 print("Training data created")
 
-# actual training
-# Create model - 3 layers. First layer 128 neurons, second layer 64 neurons and 3rd output layer contains number of neurons
-# equal to number of intents to predict output intent with softmax
+# 학습
+# 모델 생성 - 3개 도면층. 첫 번째 층 128개, 두 번째 층 64개,
+#             세 번째 출력 층은 뉴런 수를 포함
+
 model = Sequential()
 model.add(Dense(128, input_shape=(len(train_x[0]),), activation="relu"))
 model.add(Dropout(0.5))
@@ -92,19 +91,12 @@ model.add(Dropout(0.5))
 model.add(Dense(len(train_y[0]), activation="softmax"))
 model.summary()
 
-# Compile model. Stochastic gradient descent with Nesterov accelerated gradient gives good results for this model
+# 모델 컴파일
 sgd = SGD(lr=0.01, decay=1e-6, momentum=0.9, nesterov=True)
 model.compile(loss="categorical_crossentropy", optimizer=sgd, metrics=["accuracy"])
 
-# for choosing an optimal number of training epochs to avoid underfitting or overfitting use an early stopping callback to keras
-# based on either accuracy or loos monitoring. If the loss is being monitored, training comes to halt when there is an 
-# increment observed in loss values. Or, If accuracy is being monitored, training comes to halt when there is decrement observed in accuracy values.
 
-# from keras import callbacks 
-# earlystopping = callbacks.EarlyStopping(monitor ="loss", mode ="min", patience = 5, restore_best_weights = True)
-# callbacks =[earlystopping]
-
-# fitting and saving the model
+# 모델 저장, fitting
 hist = model.fit(np.array(train_x), np.array(train_y), epochs=200, batch_size=5, verbose=1)
 model.save("chatbot_model.h5", hist)
 print("model created")
