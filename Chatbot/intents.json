@@ -2,110 +2,110 @@
   "intents": [
     {
       "tag": "greetings",
-      "patterns": [ "hi there", "hello", "haroo", "yaw", "wassup", "hi", "hey", "holla", "hello" ],
-      "responses": [ "hello thanks for checking in", "hi there, how can i help you" ],
+      "patterns": [ "hi there", "hello", "haroo", "yaw", "wassup", "hi", "hey", "holla", "hello","안녕","안녕하세요","반가워" ],
+      "responses": [ "hello thanks for checking in", "hi there, how can i help you","안녕","안녕하세요","반가워" ],
       "context": [ "" ]
     },
     {
       "tag": "goodbye",
-      "patterns": [ "bye", "good bye", "see you later" ],
-      "responses": [ "have a nice time, welcome back again", "bye bye" ],
+      "patterns": [ "bye", "good bye", "see you later","잘가","안녕" ],
+      "responses": [ "have a nice time, welcome back again", "bye bye","안녕","잘가" ],
       "context": [ "" ]
     },
     {
       "tag": "thanks",
-      "patterns": [ "Thanks", "okay", "Thank you", "thankyou", "That's helpful", "Awesome, thanks", "Thanks for helping me", "wow", "great" ],
-      "responses": [ "Happy to help!", "Any time!", "you're welcome", "My pleasure" ],
+      "patterns": [ "Thanks", "okay", "Thank you", "thankyou", "That's helpful", "Awesome, thanks", "Thanks for helping me", "wow", "great","고마워","감사해요" ],
+      "responses": [ "Happy to help!", "Any time!", "you're welcome", "My pleasure","도움을 줄 수 있어서 좋아요!" ],
       "context": [ "" ]
     },
     {
       "tag": "noanswer",
       "patterns": [ "" ],
-      "responses": [ "Sorry, I didn't understand you", "Please give me more info", "Not sure I understand that" ],
+      "responses": [ "Sorry, I didn't understand you", "Please give me more info", "Not sure I understand that","이해하지 못했어요","잘못 입력한 것 같아요" ],
       "context": [ "" ]
     },
     {
       "tag": "name1",
-      "patterns": [ "what's your name?", "who are you?" ],
-      "responses": [ "I'm just a chat agent. I only exist in the internet", "I'm a KCA chat agent" ],
+      "patterns": [ "what's your name?", "who are you?","이름이 뭐야?","이름은?" ],
+      "responses": [ "I'm just a chat agent. I only exist in the internet", "나는 민원상담 챗봇이야","나는 도움을 주기 위한 챗봇이야" ],
       "context": [ "" ]
     },
     {
       "tag": "rentgangnam",
-      "patterns": [ "gangnam", "gangnam number","gangna","gangn" ],
-      "responses": [ "call: 02)3423-7200" ],
+      "patterns": [ "gangnam", "gangnam number","gangna","gangn","강남 휠체어 대여","강남 휠체어","강남 대여" ],
+      "responses": [ "call: 02)3423-7200","전화번호: 02)3423-7200" ],
       "context": [ "" ]
     },
     {
       "tag": "rentmapo",
-      "patterns": [ "mapo", "mapo number","map","ma" ],
-      "responses": [ "call: 02)3153-9020" ],
+      "patterns": [ "mapo", "mapo number","map","ma","마포 휠체어 대여","마포 휠체어","마포 대여" ],
+      "responses": [ "call: 02)3153-9020","전화번호: 02)3153-9020" ],
       "context": [ "" ]
     },
     {
       "tag": "rentseocho",
-      "patterns": [ "seocho", "seocho number","seoch", "seoc" ],
-      "responses": [ "call: 02)2155-8114" ],
+      "patterns": [ "seocho", "seocho number","seoch", "seoc","서초 휠체어 대여","서초 휠체어","서초 대여" ],
+      "responses": [ "call: 02)2155-8114","전화번호: 02)2155-8114" ],
       "context": [ "" ]
     },
     {
       "tag": "rentyongsan",
-      "patterns": [ "yongsan", "yongsan number","yongsa","yongs","yong" ],
-      "responses": [ "call: 02)2199-8012" ],
+      "patterns": [ "yongsan", "yongsan number","yongsa","yongs","yong","용산 휠체어 대여","용산 휠체어","용산 대여" ],
+      "responses": [ "call: 02)2199-8012","전화번호: 02)2199-8012" ],
       "context": [ "" ]
     },
     {
       "tag": "dreamplus",
-      "patterns": [ "dreamplus_help", "dream_plus number","dream","plus" ],
-      "responses": [ "call: 02)849-8533" ],
+      "patterns": [ "dreamplus_help", "dream_plus number","dream","plus","드림플러스센터","드림플러스" ],
+      "responses": [ "call: 02)849-8533","전화번호: 02)849-8533" ],
       "context": [ "" ]
     },
     {
       "tag": "family help",
-      "patterns": [ "songdong family help", "songdong family help number" ],
-      "responses": [ "call: 02)6929-2456" ],
+      "patterns": [ "songdong family help", "songdong family help number","성동가족지원센터", "성동지원센터" ],
+      "responses": [ "call: 02)6929-2456","전화번호: 02)6929-2456" ],
       "context": [ "" ]
     },
     {
       "tag": "heart",
-      "patterns": [ "heart divide", "heart divide number" ],
-      "responses": [ "call: 02)846-0042" ],
+      "patterns": [ "heart divide", "heart divide number","사랑나눔센터","사랑나눔" ],
+      "responses": [ "call: 02)846-0042","전화번호: 02)846-0042" ],
       "context": [ "" ]
     },
     {
       "tag": "gongno education",
-      "patterns": [ "gongno education", "gongno education number","gongno eud","gongnoedu" ],
-      "responses": [ "call: 02)942-2223" ],
+      "patterns": [ "gongno education", "gongno education number","gongno eud","gongnoedu" ,"종로장애인교육센터","종로교육센터","종로장애인센터"],
+      "responses": [ "call: 02)942-2223","전화번호: 02)942-2223" ],
       "context": [ "" ]
     },
     {
       "tag": "taxi",
-      "patterns": [ "seoul taxi", "seoul taxi number","taxi","ta","t" ],
-      "responses": [ "call: 1588-4388" ],
+      "patterns": [ "seoul taxi", "seoul taxi number","taxi","ta","t","서울 장애인 택시","서울 택시","장애인택시 호출" ],
+      "responses": [ "call: 1588-4388","전화번호: 1588-4388" ],
       "context": [ "" ]
     },
     {
       "tag": "destroy",
-      "patterns": [ "road destroy", "destroy","sidewalk destroy","sidewalk","road","problem"],
-      "responses": [ "call:02-120(02-731-2120) abroad: 82-2-731-2120" ],
+      "patterns": [ "road destroy", "destroy","sidewalk destroy","sidewalk","road","problem","도로 파손 신고","보도 파손 신고","도로 파손","보도 파손"],
+      "responses": [ "call:02-120(02-731-2120) abroad: 82-2-731-2120","전화번호:02-120(02-731-2120) 국제: 82-2-731-2120" ],
       "context": [ "" ]
     },
     {
       "tag": "bus 143",
-      "patterns": [ "bus 143 reservation","143 reser"],
-      "responses": [ "call: 02-941-3453" ],
+      "patterns": [ "bus 143 reservation","143 reser","버스 143번 저상버스 예약","143번 저상버스 예약","143번 예약","버스 143번 예약"],
+      "responses": [ "call: 02-941-3453","전화번호: 02-941-3453" ],
       "context": [ "" ]
     },
     {
       "tag": "bus 6712",
-      "patterns": [ "bus 6712 reservation","6712 reser"],
-      "responses": [ "call: 02-2666-0966" ],
+      "patterns": [ "bus 6712 reservation","6712 reser","버스 6712번 저상버스 예약","6712번 저상버스 예약","6712번 예약","버스 6712번 예약"],
+      "responses": [ "call: 02-2666-0966","전화번호: 02-2666-0966" ],
       "context": [ "" ]
     },
     {
       "tag": "bus 5714",
-      "patterns": [ "bus 5714 reservation","5714 reser"],
-      "responses": [ "call: 02-898-4324" ],
+      "patterns": [ "bus 5714 reservation","5714 reser","버스 5714번 저상버스 예약","5714번 저상버스 예약","5714번 예약","버스 5714번 예약"],
+      "responses": [ "call: 02-898-4324","전화번호: 02-898-4324" ],
       "context": [ "" ]
     }
 
