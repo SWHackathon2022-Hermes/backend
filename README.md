@@ -1,14 +1,25 @@
 # C8_Hermes / Hermes
+<br><img width=1280 src="https://user-images.githubusercontent.com/76610340/175432388-99bbf4b4-3586-4faa-b0f0-07d0dd2f1c88.png">
 ------------
-### 팀원소개
-------------
-> + (1) 우송대학교 / 김나연 / 개발자 / 리더
-> + (2) 대구가톨릭대학교 / 정승균 / 개발자 / 소통
-> + (3) 상명대학교 / 최유진 / 개발자 / 서버관리
-> + (4) 숭실대학교 / 유나경 / 디자이너 / 영상제공
-> + (5) 인하대학교 / 임주민 / 개발자 / 자료취합
+## 🧑🏻‍💻 Hermes Team
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/seunggyun-jeong"><img src="https://user-images.githubusercontent.com/76610340/175435864-1f73aef9-ec25-4e9b-bf0e-61d3a8a26d3e.png" width="200px;" alt=""/><br />대구가톨릭대학교<br />정승균</td>
+    <td align="center"><a href="https://github.com/jumining"><img src="https://user-images.githubusercontent.com/76610340/175436187-bc4d8810-87ac-4638-b13d-ecdde80ad404.png" width="200px;" alt=""/><br />인하대학교<br />임주민</td>
+       <td align="center"><a href="https://github.com/NayounK1m"><img src="https://user-images.githubusercontent.com/76610340/175436205-453aeefb-2fa5-4e01-825a-b5201cff2f71.png" width="200px;" alt=""/><br />우송대학교<br />김나연</td>
+          <td align="center"><a href="https://github.com/yujin37"><img src="https://user-images.githubusercontent.com/76610340/175436235-f5331a3f-88d4-4905-bbdc-4b445ec483ea.png" width="200px;" alt=""/><br />상명대학교<br />최유진</td>
+             <td align="center"><img src="https://user-images.githubusercontent.com/76610340/175435986-1ea866a3-7ac7-474a-81ed-ff12d78d8759.png" width="200px;" alt=""/><br />숭실대학교<br />유나경 </td>
+  </tr>
+</table>
+
+ <br>
+ 
 ### 동작 방식
-------------
+
   ##### [ train.py ]
 ------------
    * intents.json 내의 데이터 기반으로 학습
@@ -35,7 +46,7 @@
    * Rest-API Json 형식 POST
    * 클라이언트로부터 민원 Data(유형, 위치, 상세위치, 설명) 저장
 ### 개발/배포 환경
-------------
+
   ##### Python 3.10, 라이브러리
 ------------
   * TensorFlow
