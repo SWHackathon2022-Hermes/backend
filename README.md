@@ -8,17 +8,23 @@
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/seunggyun-jeong"><img src="https://user-images.githubusercontent.com/76610340/175435864-1f73aef9-ec25-4e9b-bf0e-61d3a8a26d3e.png" width="200px;" alt=""/><br />대구가톨릭대학교<br />정승균<br />iOS</td>
-    <td align="center"><a href="https://github.com/jumining"><img src="https://user-images.githubusercontent.com/76610340/175436187-bc4d8810-87ac-4638-b13d-ecdde80ad404.png" width="200px;" alt=""/><br />인하대학교<br />임주민<br />iOS</td>
-  </tr>
-  </table>
-  <table>
-    <tr>
-  <td align="center"><a href="https://github.com/NayounK1m"><img src="https://user-images.githubusercontent.com/76610340/175436205-453aeefb-2fa5-4e01-825a-b5201cff2f71.png" width="200px;" alt=""/><br />우송대학교<br />김나연<br />back-end</td>
-          <td align="center"><a href="https://github.com/yujin37"><img src="https://user-images.githubusercontent.com/76610340/175436235-f5331a3f-88d4-4905-bbdc-4b445ec483ea.png" width="200px;" alt=""/><br />상명대학교<br />최유진<br />AI</td>
-             <td align="center"><img src="https://user-images.githubusercontent.com/76610340/175435986-1ea866a3-7ac7-474a-81ed-ff12d78d8759.png" width="200px;" alt=""/><br />숭실대학교<br />유나경<br />Designer</td>
+    <td align="center"><a href="https://github.com/seunggyun-jeong"><img src="https://user-images.githubusercontent.com/76610340/175435864-1f73aef9-ec25-4e9b-bf0e-61d3a8a26d3e.png" width="200px;" alt=""/><br />정승균<br />(iOS Developer)</td>
+    <td align="center"><a href="https://github.com/jumining"><img src="https://user-images.githubusercontent.com/76610340/175436187-bc4d8810-87ac-4638-b13d-ecdde80ad404.png" width="200px;" alt=""/><br />임주민<br />(iOS Developer)</td>
+  <td align="center"><a href="https://github.com/NayounK1m"><img src="https://user-images.githubusercontent.com/76610340/175436205-453aeefb-2fa5-4e01-825a-b5201cff2f71.png" width="200px;" alt=""/><br />김나연<br />(BackEnd Developer)</td>
+          <td align="center"><a href="https://github.com/yujin37"><img src="https://user-images.githubusercontent.com/76610340/175436235-f5331a3f-88d4-4905-bbdc-4b445ec483ea.png" width="200px;" alt=""/><br />최유진<br />(AI Developer)</td>
+             <td align="center"><img src="https://user-images.githubusercontent.com/76610340/175435986-1ea866a3-7ac7-474a-81ed-ff12d78d8759.png" width="200px;" alt=""/><br />숭실대학교<br />유나경<br />(UX/UI Designer)</td>
         </tr>
 </table>
+
+<br>
+
+<br>
+
+## 🌱 프로젝트 배경/목표
+1) 전동휠체어 배터리가 없어져서 멈추면 혼자 있을때 아예 움직일 수가 없기 때문에 119나 경찰을 부르는 경우가 있어, 미리 가까운 급속충전기 위치를 안내해주는 것이 목표입니다. 
+2) 지하철을 이용하러 갈 때, 휠체어로 이동할 수 있는 길이 한정적이여서 지하철 내에 있는 휠체어 리프트의 위치를 안내해서 이용에 도움을 주는 것이 목표입니다.
+3) 지하철 내에 휠체어 사용자들이 이용할 수 있는 화장실의 위치를 안내해 이용에 도움을 주는 것이 목표입니다.
+4) 휠체어를 이용하다보면 고르지 않은 길과 타일에 바퀴가 잘 빠져서 혼자서 빠져나가기 힘들거나, 휠체어가 걸려 뒤로 넘어가서 위험한 일이 생기고는 합니다. 보도는 모든 사람이 이용하는 공공재로서 누구나 차별 받지 않고 이용할 수 있어야 한다는 점을 감안할 때, 해당 부분에서 도로의 타일이 튀어나와있거나 바퀴가 빠질 정도의 홈이 있는 등의 유형(type)을 선택 및 자세한 내용 작성과 사진 촬영 그리고 어디인지 위치 등록을 해서 불편을 해소해 주는 것이 목표입니다.
 
 <br>
  
@@ -78,3 +84,11 @@ https://medium.com/@feedbotstar/python-flask-%EB%A1%9C-%EA%B0%84%EB%8B%A8%ED%95%
   > * 챗봇 서버 구동 :backend\Chatbot\app.py
   ##### 등록 민원 저장 서버
   > * backend\Reportview_bot\restapi.py
+
+<br>
+
+### 👉 [Hermes 영상 Youtube 바로가기](https://www.)
+
+<br>
+
+### 👉 [Hermes 문서 Notion 바로가기](https://www.notion.so/Hermes-55dde0987fad40d0a0648eedcf63b14e)
